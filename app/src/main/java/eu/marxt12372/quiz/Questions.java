@@ -6,23 +6,23 @@ import java.util.List;
 public class Questions
 {
     private String MyQuestions [] = {
-            "Kys1",
-            "Kys2",
-            "Kys3",
-            "Kys4",
-            "Kys5"
+            "Which Android component is responsible for displaying the application user interface?",
+            "How does Android know which components are in the application?",
+            "What widget can replace any use of radio buttons?",
+            "Where do you write the code that makes all the widgets work?",
+            "Is what you're doing in any way, shape or form useful?"
     };
 
     private String MyChoices [] [] = {
-            {"Vastus11", "Vastus12", "Vastus13", "Vastus14"},
-            {"Vastus21", "Vastus22", "Vastus23", "Vastus24"},
-            {"Vastus31", "Vastus32", "Vastus33", "Vastus34"},
-            {"Vastus41", "Vastus42", "Vastus43", "Vastus44"},
-            {"Vastus51", "Vastus52", "Vastus53", "Vastus54"}
+        {"Layout", "Activity", "Window", "Manifest"},
+        {"By type", "The Android Manifest", "They are registered when Main() is called", "By class"},
+        {"Toggle Button", "Spinner", "Switch Button", "Image Button"},
+        {"Wherever I want", "In XML files", "In the java class", "What is code? Better yet WTF is a widget???"},
+        {"Yes", "No", "Maybe", "I Still Don't Know Where I am or What I'm Doing"}
     };
 
     private String MyCorrectAnswers [] = {
-            "Vastus11", "Vastus21", "Vastus31", "Vastus41", "Vastus51"
+        "Layout", "The Android Manifest", "Spinner", "In the java class", "Maybe"
     };
 
     public String getQuestion(int question)
