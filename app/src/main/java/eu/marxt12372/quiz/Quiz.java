@@ -1,5 +1,6 @@
 package eu.marxt12372.quiz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -116,7 +117,10 @@ public class Quiz extends AppCompatActivity
         else if(question == 4)
         {
             question = 0;
-            //Show the score activity thingy.
+            Intent intent = new Intent(this, ScoreActivity.class);
+            intent.putExtra("score_current", currentscore);
+            intent.putExtra("score_max", maxScore);
+            startActivity(intent);
         }
     }
 
