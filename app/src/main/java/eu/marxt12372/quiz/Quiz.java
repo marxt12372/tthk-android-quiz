@@ -38,7 +38,7 @@ public class Quiz extends AppCompatActivity
 
         question = 0;
         currentScore = 0;
-        maxScore = 0; //TODO: Salvestada file ja laadida filest???
+        //maxScore = 0; //TODO: Salvestada file ja laadida filest???
 
         changeQuestion(question);
 
