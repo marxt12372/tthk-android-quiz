@@ -1,7 +1,6 @@
 package eu.marxt12372.quiz;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Questions
