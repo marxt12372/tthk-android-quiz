@@ -109,6 +109,10 @@ public class Quiz extends AppCompatActivity
 
     public void nextPage()
     {
+        if(currentScore >= maxScore)
+        {
+            maxScore = currentScore;
+        }
         if(question < 4)
         {
             question++;
@@ -121,10 +125,6 @@ public class Quiz extends AppCompatActivity
             intent.putExtra("score_current", currentScore);
             intent.putExtra("score_max", maxScore);
             startActivity(intent);
-        }
-        if(currentScore >= maxScore)
-        {
-            maxScore = currentScore;
         }
     }
 
