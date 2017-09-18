@@ -41,4 +41,11 @@ public class ScoreActivity extends AppCompatActivity
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), Quiz.class);
+        startActivity(intent);
+        finish();
+    }
 }
