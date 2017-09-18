@@ -14,11 +14,11 @@ public class Questions
     };
 
     private String MyChoices [] [] = {
-            {"Vastus1", "Vastus2", "Vastus3", "Vastus4"},
-            {"Vastus1", "Vastus2", "Vastus3", "Vastus4"},
-            {"Vastus1", "Vastus2", "Vastus3", "Vastus4"},
-            {"Vastus1", "Vastus2", "Vastus3", "Vastus4"},
-            {"Vastus1", "Vastus2", "Vastus3", "Vastus4"}
+            {"Vastus11", "Vastus12", "Vastus13", "Vastus14"},
+            {"Vastus21", "Vastus22", "Vastus23", "Vastus24"},
+            {"Vastus31", "Vastus32", "Vastus33", "Vastus34"},
+            {"Vastus41", "Vastus42", "Vastus43", "Vastus44"},
+            {"Vastus51", "Vastus52", "Vastus53", "Vastus54"}
     };
 
     private String MyCorrectAnswers [] = {
