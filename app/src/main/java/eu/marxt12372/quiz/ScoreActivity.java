@@ -27,8 +27,8 @@ public class ScoreActivity extends AppCompatActivity
         score2 = (TextView) findViewById(R.id.score2);
         backbtn = (Button) findViewById(R.id.button5);
 
-        score1.setText(getString(R.string.score) + score + getString(R.string.score2));
-        score2.setText(getString(R.string.score3) + maxscore);
+        score1.setText(getString(R.string.score) + " " + score + " " + getString(R.string.score2));
+        score2.setText(getString(R.string.score3) + " " + maxscore);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
