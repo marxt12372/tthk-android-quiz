@@ -23,8 +23,8 @@ public class ScoreActivity extends AppCompatActivity
         score = intent.getIntExtra("score_current", score);
         maxscore = intent.getIntExtra("score_max", maxscore);
 
-        score1 = (TextView) findViewById(R.id.score2);
-        score2 = (TextView) findViewById(R.id.score3);
+        score1 = (TextView) findViewById(R.id.score3);
+        score2 = (TextView) findViewById(R.id.score2);
         backbtn = (Button) findViewById(R.id.button5);
 
         score1.setText(getString(R.string.score) + score + getString(R.string.score2));
