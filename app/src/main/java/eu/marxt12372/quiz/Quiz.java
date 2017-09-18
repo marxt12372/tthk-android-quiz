@@ -13,8 +13,8 @@ import java.util.List;
 public class Quiz extends AppCompatActivity
 {
     private int maxScore;
+    private int currentScore;
     private int question;
-    private int currentscore;
     private Questions questions;
 
     private TextView quiz;
@@ -37,7 +37,7 @@ public class Quiz extends AppCompatActivity
         btn[3] = (Button) findViewById(R.id.button4);
 
         question = 0;
-        currentscore = 0;
+        currentScore = 0;
         maxScore = 0; //TODO: Salvestada file ja laadida filest???
 
         changeQuestion(question);
@@ -48,7 +48,7 @@ public class Quiz extends AppCompatActivity
                 if(btn[0].getText().toString().equals(questions.getCorrentAnswer(question))) //Õige vastus
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerright), Toast.LENGTH_SHORT).show();
-                    currentscore++;
+                    currentScore++;
                 }
                 else //Vale vastus
                 {
@@ -64,7 +64,7 @@ public class Quiz extends AppCompatActivity
                 if(btn[1].getText().toString().equals(questions.getCorrentAnswer(question))) //Õige vastus
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerright), Toast.LENGTH_SHORT).show();
-                    currentscore++;
+                    currentScore++;
                 }
                 else //Vale vastus
                 {
@@ -80,7 +80,7 @@ public class Quiz extends AppCompatActivity
                 if(btn[2].getText().toString().equals(questions.getCorrentAnswer(question))) //Õige vastus
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerright), Toast.LENGTH_SHORT).show();
-                    currentscore++;
+                    currentScore++;
                 }
                 else //Vale vastus
                 {
@@ -96,7 +96,7 @@ public class Quiz extends AppCompatActivity
                 if(btn[3].getText().toString().equals(questions.getCorrentAnswer(question))) //Õige vastus
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerright), Toast.LENGTH_SHORT).show();
-                    currentscore++;
+                    currentScore++;
                 }
                 else //Vale vastus
                 {
@@ -118,16 +118,20 @@ public class Quiz extends AppCompatActivity
         {
             question = 0;
             Intent intent = new Intent(this, ScoreActivity.class);
-            intent.putExtra("score_current", currentscore);
+            intent.putExtra("score_current", currentScore);
             intent.putExtra("score_max", maxScore);
             startActivity(intent);
+        }
+        if(currentScore >= maxScore)
+        {
+            maxScore = currentScore;
         }
     }
 
     public void changeQuestion(int newQuestion)
     {
         quiz.setText(questions.getQuestion(newQuestion));
-        score.setText(currentscore + "/" + maxScore);
+        score.setText(currentScore + "/" + maxScore);
         List<String> answers = questions.getAnswers(newQuestion);
         for(int i = 0; i <= 3; i++)
         {
