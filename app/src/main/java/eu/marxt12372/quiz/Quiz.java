@@ -127,6 +127,7 @@ public class Quiz extends AppCompatActivity
             intent.putExtra("score_current", currentScore);
             intent.putExtra("score_max", maxScore);
             startActivity(intent);
+            finish();
         }
     }
 

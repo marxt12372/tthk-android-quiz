@@ -37,6 +37,7 @@ public class ScoreActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Quiz.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
