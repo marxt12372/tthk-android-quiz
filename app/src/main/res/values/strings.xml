@@ -2,4 +2,7 @@
     <string name="app_name">Simple Quiz</string>
     <string name="answerright">Right Answer</string>
     <string name="answerwrong">Wrong Answer</string>
+    <string name="back">Back</string>
+    <string name="score">You scored</string>
+    <string name="score2">points out of 5.</string>
 </resources>
