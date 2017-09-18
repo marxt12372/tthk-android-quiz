@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Simple Quiz</string>
+    <string name="answerright">Right Answer</string>
+    <string name="answerwrong">Wrong Answer</string>
 </resources>
