@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Quiz extends AppCompatActivity
 {
-    private static int maxScore;
+    private int maxScore;
     private int question;
     private int currentscore;
     private Questions questions;
