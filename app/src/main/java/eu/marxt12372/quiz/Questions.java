@@ -22,7 +22,7 @@ public class Questions
     };
 
     private String MyCorrectAnswers [] = {
-            "Vastus1", "Vastus1", "Vastus1", "Vastus1", "Vastus1"
+            "Vastus11", "Vastus21", "Vastus31", "Vastus41", "Vastus51"
     };
 
     public String getQuestion(int question)
