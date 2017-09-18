@@ -38,6 +38,8 @@ public class Quiz extends AppCompatActivity
 
         question = 0;
         currentScore = 0;
+        DBHandler dbHandler = new DBHandler(getApplicationContext());
+        maxScore = dbHandler.getMaxScore();
         //maxScore = 0; //TODO: Salvestada file ja laadida filest???
 
         changeQuestion(question);

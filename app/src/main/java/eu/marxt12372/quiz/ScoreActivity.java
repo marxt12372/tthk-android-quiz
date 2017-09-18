@@ -29,6 +29,8 @@ public class ScoreActivity extends AppCompatActivity
 
         score1.setText(getString(R.string.score) + " " + score + " " + getString(R.string.score2));
         score2.setText(getString(R.string.score3) + " " + maxscore);
+        DBHandler dbHandler = new DBHandler(getApplicationContext());
+        dbHandler.setMaxScore(maxscore);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
