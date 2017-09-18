@@ -5,4 +5,5 @@
     <string name="back">Back</string>
     <string name="score">You scored</string>
     <string name="score2">points out of 5.</string>
+    <string name="score3">Your top score is </string>
 </resources>
