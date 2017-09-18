@@ -53,17 +53,7 @@ public class Quiz extends AppCompatActivity
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerwrong), Toast.LENGTH_SHORT).show();
                 }
-
-                if(question < 4)
-                {
-                    question++;
-                    changeQuestion(question);
-                }
-                else if(question == 4)
-                {
-                    question = 0;
-                    //Show the score activity thingy.
-                }
+                nextPage();
             }
         });
 
@@ -79,17 +69,7 @@ public class Quiz extends AppCompatActivity
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerwrong), Toast.LENGTH_SHORT).show();
                 }
-
-                if(question < 4)
-                {
-                    question++;
-                    changeQuestion(question);
-                }
-                else if(question == 4)
-                {
-                    question = 0;
-                    //Show the score activity thingy.
-                }
+                nextPage();
             }
         });
 
@@ -105,17 +85,7 @@ public class Quiz extends AppCompatActivity
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerwrong), Toast.LENGTH_SHORT).show();
                 }
-
-                if(question < 4)
-                {
-                    question++;
-                    changeQuestion(question);
-                }
-                else if(question == 4)
-                {
-                    question = 0;
-                    //Show the score activity thingy.
-                }
+                nextPage();
             }
         });
 
@@ -131,19 +101,23 @@ public class Quiz extends AppCompatActivity
                 {
                     Toast.makeText(getBaseContext(), getString(R.string.answerwrong), Toast.LENGTH_SHORT).show();
                 }
-
-                if(question < 4)
-                {
-                    question++;
-                    changeQuestion(question);
-                }
-                else if(question == 4)
-                {
-                    question = 0;
-                    //Show the score activity thingy.
-                }
+                nextPage();
             }
         });
+    }
+
+    public void nextPage()
+    {
+        if(question < 4)
+        {
+            question++;
+            changeQuestion(question);
+        }
+        else if(question == 4)
+        {
+            question = 0;
+            //Show the score activity thingy.
+        }
     }
 
     public void changeQuestion(int newQuestion)
