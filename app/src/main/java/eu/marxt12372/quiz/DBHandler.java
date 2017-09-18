@@ -9,12 +9,13 @@ public class DBHandler extends SQLiteOpenHelper
 {
     public DBHandler(Context context)
     {
-        super(context, "max_score", null, 1);
+        super(context, "max_score", null, 2);
     }
 
     public void onCreate(SQLiteDatabase db)
     {
         db.execSQL("CREATE TABLE score (id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER);");
+        db.execSQL("INSERT INTO score (id, score) VALUES ('1', '0')");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -28,6 +29,7 @@ public class DBHandler extends SQLiteOpenHelper
         int maxScore = 0;
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM score WHERE id = 1;", null);
+        c.moveToFirst();
         maxScore = c.getInt(c.getColumnIndex("score"));
         db.close();
         return maxScore;
